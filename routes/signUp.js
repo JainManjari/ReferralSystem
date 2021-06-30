@@ -4,6 +4,7 @@ const employeeController=require("../controller/employee_controller");
 const jobSeekerController=require("../controller/job_seeker_controller");
 
 router.get("/employee",employeeController.signUpEmployee);
+router.post("/employee",employeeController.createEmployee);
 
 router.get("/job-seeker",jobSeekerController.signUpJob);
 
