@@ -1,0 +1,55 @@
+.welcome-heading
+{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.welcome-heading2
+{
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 40px;
+}
+
+.emp-job
+{
+    flex-direction: column;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    margin: auto;
+    font-size: 18px;
+}
+
+.emp-job button
+{
+    margin: 10px;
+    background: transparent;
+    width: 250px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.emp-job #emp
+{
+    background: #C32148;
+}
+
+.emp-job #emp:hover
+{
+    background: #ae1338;
+}
+
+.emp-job #job
+{
+    background: #C154C1;
+}
+
+.emp-job #job:hover
+{
+    background: #b015b0;
+}
