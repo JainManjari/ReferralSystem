@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="icon" type="image/x-con" href="https://cdn.shopify.com/s/files/1/0950/0728/products/JeffPowers_HelpingHands_4bc4ca7e-077e-4014-b380-43a08c4b17c4_1024x1024.jpg?v=1575645467">
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Bellota:wght@700&family=Cabin+Sketch:wght@700&family=Courgette&family=Dancing+Script&family=Kaushan+Script&family=Marck+Script&family=Merienda+One&family=Parisienne&family=Rufina&family=Satisfy&family=VT323&family=Pacifico&family=Special+Elite&family=Cedarville+Cursive&family=Cinzel&family=Lobster&family=Slabo+27px&display=swap" rel="stylesheet">
+    <title><%= title %></title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://kit.fontawesome.com/a5a7a79d9a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+
 </head>
 <body>
     <%- include("_header"); %>
-    <%- body %>
+    <div class="body-container">
+        <%- body %>
+    </div>
     <%- include("_footer") %>
+
+    <%- script %>
 </body>
 </html>

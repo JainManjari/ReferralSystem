@@ -1,0 +1,13 @@
+body
+{
+    margin:0;
+    background: black;
+    color:white;
+}
+
+body .body-container
+{
+    min-height: 80vh;
+    height: auto;
+    margin-bottom: 30px;
+}

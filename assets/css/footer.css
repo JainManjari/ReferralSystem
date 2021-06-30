@@ -1,0 +1,48 @@
+#layout-footer {
+    background-color: #29AABD;
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 0px #94C3DD;
+    padding: 5px 0px;
+    z-index: 400;
+    font-family: 'VT323', monospace; 
+}
+
+#layout-footer > div 
+{
+      width: 95%;
+      z-index: inherit; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      height: 40px;
+}
+    
+#layout-footer div .initiated 
+{
+    margin-left: 5px; 
+}
+
+#layout-footer div a {
+    margin-left: 3px;
+    color: white;
+    font-style: italic; 
+}
+      
+#layout-footer div a:hover 
+{
+        color: #174c5f;
+        text-decoration: none; 
+}
+      
+#layout-footer div a:active, #layout-footer div a:focus 
+{
+        text-decoration: none; 
+}
