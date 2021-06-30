@@ -2,6 +2,7 @@ const express=require('express');
 const port=8000;
 const app=express();
 const path=require('path');
+const db=require('./config/mongoose');
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,"views"));
