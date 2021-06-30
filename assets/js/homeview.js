@@ -61,7 +61,7 @@ job.on("click",function(event)
     $(".form-up").append(jobForm);
     heading.css({
         "width": "200px",
-        "background-color": "rgb(174, 19, 56)",
+        "background-color": "#b015b0",
         "margin": "auto",
         "margin-bottom": "20px",
         "height": "35px",

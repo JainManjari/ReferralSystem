@@ -1,2 +1,9 @@
+<h1 class="welcome-heading">Welcome to the Referral</h1>
 
-<%- include("_homeview"); %>
+<% if(title=="Referral Home") {%>
+    <%- include("_homeview"); %>
+<% } else if(title=="Referral Home | Employee SignUp") {%>
+    <%- include("_signUpEmp"); %>
+<% } else if(title=="Referral Home | Job Seeker SignUp") {%>
+    <%- include("_signUpJob"); %>
+<% } %>
