@@ -53,3 +53,44 @@
 {
     background: #b015b0;
 }
+
+.form-up
+{
+    width: 350px;
+    margin: 50px auto 0px;
+}
+
+.form-up form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-up form input
+{
+    margin-bottom: 10px;
+    padding: 5px;
+    background: darkslategray;
+    border: none;
+    border-bottom: 1px solid;
+    color: thistle;
+}
+
+.form-up form button
+{
+    background: turquoise;
+    height: 30px;
+    width: 90px;
+    margin: 15px auto 0px;
+    color: black;
+}
+
+.form-up form input::placeholder
+{
+    color: thistle;
+}
+
+.form-up form input:focus,.form-up form button:focus
+{
+    outline: none;
+}
