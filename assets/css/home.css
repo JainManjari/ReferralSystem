@@ -9,8 +9,9 @@
 .welcome-heading2
 {
     text-align: center;
-    font-size: 19px;
+    font-size: 21px;
     margin-bottom: 40px;
+    font-family: 'Cinzel', serif;
 }
 
 .emp-job
@@ -32,6 +33,8 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    color: inherit;
+    font-size: 18px;
 }
 
 .emp-job #emp

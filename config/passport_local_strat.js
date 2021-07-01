@@ -15,13 +15,13 @@ passport.use(new LocalStrategy({
         // find a user and establish the identity
         Employee.findOne({email: email}, function(err, user)  {
             if (err){
-               // req.flash("error",err);
+                req.flash("error",err);
                 return done(err);
             }
 
             if (!user || user.password != password){
                 //console.log('Invalid Username/Password');
-                //req.flash("error","Is it @ or password?");
+                req.flash("error","Is it @ or password?");
                 
                 return done(null, false);
                 
