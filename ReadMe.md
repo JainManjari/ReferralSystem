@@ -25,7 +25,7 @@ nvm install 10.19.0
 - Mongo DB has been deployed on Atlas. No need to install it on desktop. 
 
 
-- Open the project directory on cmd promt and intsall nodemon
+- Open the project directory on cmd prompt and install nodemon
 ``` 
 npm install -g nodemon
 ```
