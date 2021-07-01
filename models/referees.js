@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const employeeSchema=new mongoose.Schema({
+const refereeSchema=new mongoose.Schema({
     email:{
         type:String,
         required:true,
@@ -11,16 +11,26 @@ const employeeSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    name:
+    firstName:
     {
         type:String,
         required:true
     },
-    referral:
+    lastName:{
+        type:String,
+        required:true
+    },
+    referralCode:
     {
         type:String,
         required:true
     },
+    referedBy:
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Employee"
+    }
+    
     
  
 },{
@@ -28,5 +38,5 @@ const employeeSchema=new mongoose.Schema({
 });
 
 
-const Employee=mongoose.model("Employee",employeeSchema);
-module.exports=Employee;
+const Referee=mongoose.model("Referee",refereeSchema);
+module.exports=Referee;

@@ -8,7 +8,7 @@ let empLoginFormCreate=function()
 {
     return $(`
     
-        <form action="employees/create-session" method="post">
+        <form action="/employees/create-session" method="post">
                <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
                <input name="pwd" type="password" required placeholder="lumos">
                <button type="submit">Submit</button>
@@ -22,7 +22,7 @@ let jobLoginFormCreate=function()
 {
     return $(`
     
-        <form action="job-seekers/create-session" method="post">
+        <form action="/referess/create-session" method="post">
                <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
                <input name="pwd" type="password" required placeholder="lumos">
                <input name="referralCode" type="text" required placeholder="Referral Code"> 

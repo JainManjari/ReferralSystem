@@ -1,12 +1,31 @@
 <p class="welcome-heading2">Sign Up for Job Seeker</p>
 
 <div class="form-up">
-    <form action="sign-up/job-seeker/" method="post">
-        <input name="name" type="text" required placeholder="Harry Potter">
-        <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
-        <input name="pwd" type="password" required placeholder="Password">
-        <input name="confirmPwd" type="password" required placeholder="Confirm Password">
-        <input name="referralCode" type="text" required placeholder="Enter Referral Code">
+    <form action="/referees/sign-up" method="post">
+        <div>
+            <input name="firstName" type="text" required placeholder="Harry">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="lastName" type="text" required placeholder="Potter">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="pwd" type="password" required placeholder="Password">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="confirmPwd" type="password" required placeholder="Confirm Password">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="referralCode" type="text" required placeholder="Enter Referral Code">
+            <span>*</span>
+        </div>
         <button type="submit">Submit</button>
     </form>
 </div>

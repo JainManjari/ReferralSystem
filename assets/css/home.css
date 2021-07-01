@@ -66,6 +66,19 @@
     flex-direction: column;
 }
 
+.form-up form > div
+{
+    display: flex;
+    align-items: center;
+}
+
+.form-up form > div span
+{
+    color: red;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
 .form-up form input
 {
     margin-bottom: 10px;
@@ -74,6 +87,12 @@
     border: none;
     border-bottom: 1px solid;
     color: thistle;
+    width: 90%;
+}
+
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color:thistle; 
 }
 
 .form-up form button

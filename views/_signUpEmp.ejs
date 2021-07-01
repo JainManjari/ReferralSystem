@@ -1,11 +1,28 @@
 <p class="welcome-heading2">Sign Up for Employee</p>
 
 <div class="form-up">
-    <form action="/sign-up/employee/" method="post">
-        <input name="name" type="text" required placeholder="Harry Potter">
-        <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
-        <input name="password" type="password" required placeholder="Password">
-        <input name="confirmPwd" type="password" required placeholder="Confirm Password">
+    <form action="/employees/sign-up" method="post">
+        <div>
+            <input name="firstName" type="text" required placeholder="Harry">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="lastName" type="text" required placeholder="Potter">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="password" type="password" required placeholder="Password">
+            <span>*</span>
+        </div>
+        <div>
+            <input name="confirmPwd" type="password" required placeholder="Confirm Password">
+            <span>*</span>
+        </div>
+        
         <button type="submit">Submit</button>
     </form>
 </div>

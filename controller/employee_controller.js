@@ -1,4 +1,5 @@
-const Employee=require('../models/employee');
+const Employee=require('../models/employees');
+const Referee=require('../models/referees');
 
 module.exports.signUpEmployee=function(req,res)
 {
@@ -11,8 +12,9 @@ module.exports.createEmployee=async function(req,res)
     {
         
         let employee=await Employee.findOne({email:req.body.email});
+        let referee=await Referee.findOne({email:req.body.email});
         let length=await Employee.count();
-        if(employee)
+        if(employee || referee)
         {
             return res.redirect("back");
         }
@@ -22,13 +24,14 @@ module.exports.createEmployee=async function(req,res)
         }
         else
         {
-            let referral=req.body.name.substring(0,3).toUpperCase()+""+(length+1)*10;
+            let referral=req.body.firstName.substring(0,3).toUpperCase()+""+(length+1)*10+req.body.lastName.substring(0,3).toUpperCase();
             console.log(referral);
             let newEmployee={
-                name:req.body.name,
+                firstName:req.body.firstName,
+                lastName:req.body.lastName,
                 password:req.body.password,
                 email:req.body.email,
-                referral:referral
+                referralCode:referral,
             }
             newEmployee=await Employee.create(newEmployee);
             console.log(newEmployee);
