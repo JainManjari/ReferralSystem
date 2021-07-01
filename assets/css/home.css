@@ -79,6 +79,19 @@
     margin-left: 5px;
 }
 
+.form-up form .pwd
+{
+    position: relative;
+}
+
+.form-up form .pwd i 
+{
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    top: 9px;
+}
+
 .form-up form input
 {
     margin-bottom: 10px;
