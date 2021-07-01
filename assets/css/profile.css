@@ -202,6 +202,28 @@
     font-size: 40px;
 }
 
+.delete-emp-acct
+{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.delete-emp-acct a
+{
+    text-decoration: none;
+    color: darkred;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Marcellus SC', serif;
+}
+
+
+
+
+
 
 
 
@@ -229,6 +251,6 @@
 
 .refered-by a:hover,.refered-by a:active
 {
-    color: lightgrey;
+    color: #a19999;
     text-decoration: none;
 }

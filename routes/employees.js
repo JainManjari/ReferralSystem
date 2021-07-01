@@ -11,5 +11,6 @@ router.post('/create-session', passport.authenticate(
 ), employeeController.createSession);
 
 router.get("/sign-out",employeeController.destroySession);
+router.get("/delete-account",employeeController.deleteAccount);
 
 module.exports=router;

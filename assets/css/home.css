@@ -120,11 +120,12 @@ input:-webkit-autofill {
     margin: 15px auto 0px;
     color: black;
     border-color: orange;
+    cursor: pointer;
 }
 
 .form-up form button:hover
 {
-    background: rgb(61, 165, 155);
+    background:#e57373;
 }
 
 .form-up form input::placeholder

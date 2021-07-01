@@ -19,7 +19,7 @@ passport.use(new LocalStrategy({
                 req.flash("error",err);
                 return done(err);
             }
-            if (!user || user.password != password || (!user.isEmployee && user.referralCode!=referralCode)){
+            if (!user || user.password != password || (!user.isEmployee && user.referralCode!=referralCode) || (user.isEmployee && user.referralCode==referralCode)){
                 //console.log('Invalid Username/Password');
                 req.flash("error","Invalid details!!");
                 return done(null, false);

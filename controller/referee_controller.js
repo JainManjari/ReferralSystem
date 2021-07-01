@@ -51,12 +51,10 @@ module.exports.createReferee=async function(req,res)
                 referedBy:refer._id
             }
             newReferee=await Employee.create(newReferee);
-            console.log(newReferee);
 
             refer.referees.push(newReferee);
             refer.save();
 
-            console.log("refer 2 "+refer);
 
             req.flash("success", "Sign Up Done Right!");
             return res.redirect("/");

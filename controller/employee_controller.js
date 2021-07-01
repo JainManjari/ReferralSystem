@@ -30,7 +30,6 @@ module.exports.createEmployee=async function(req,res)
         else
         {
             let referral=req.body.firstName.substring(0,3).toUpperCase()+""+(length+1)*10+req.body.lastName.substring(0,3).toUpperCase();
-            console.log(referral);
             let newEmployee={
                 firstName:req.body.firstName,
                 lastName:req.body.lastName,
@@ -40,7 +39,6 @@ module.exports.createEmployee=async function(req,res)
                 isEmployee:true
             }
             newEmployee=await Employee.create(newEmployee);
-            console.log(newEmployee);
             req.flash("success", "Sign Up Done Right!");
             return res.redirect("/");
 
@@ -68,3 +66,33 @@ module.exports.destroySession = function (req, res) {
     return res.redirect("/");
 }
 
+
+
+
+module.exports.deleteAccount= async function(req,res)
+{
+    try
+    {
+        if(!req.isAuthenticated())
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        if(!req.user.isEmployee)
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        let employee=await Employee.findByIdAndDelete(req.user.id);
+        await Employee.deleteMany({referedBy:employee._id});
+        req.logout();
+        req.flash("success", "Erased!!");
+        return res.redirect("/");
+
+    }
+    catch(err)
+    {
+        console.log("error in deleting employee account "+err);
+        return;
+    }
+}
