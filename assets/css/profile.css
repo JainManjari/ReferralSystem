@@ -1,0 +1,100 @@
+.referral-code-container
+{
+    width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.referral-code-container .title
+{
+    font-family: 'Taviraj', serif;
+    font-size: 20px;
+    padding: 2px 10px;
+    box-sizing: border-box;
+    text-decoration: underline;
+}
+
+.referral-code-container .referral-code
+{
+    min-width: 165px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    padding: 0px 10px;
+    background: #E6BE8A;
+    border: 5px dashed brown;
+    margin: 35px 0px;
+}
+
+.horizontal
+{
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+.horizontal li
+{
+	display: inline-block;
+	margin:0px 8px 8px 0px;
+}
+
+
+
+.horizontal li a
+{
+	cursor: pointer;
+	color:#fd7777;
+	text-decoration: none;
+}
+
+
+
+.center
+{
+	text-align: center;
+}
+
+.social
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.social > span
+{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.social .social-icons{
+	width: 100%;
+	margin: auto;
+}
+
+.social .social-icons li{
+	margin: 10px;
+}
+
+.social .social-icons li a i
+{
+	border-radius: 50%;
+	padding: 12px;
+	font-size: 1.2rem;
+	transition: all 0.8s ease-in-out;
+	
+}
+
+.social .social-icons li a i:hover
+{
+
+	box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.2);
+}
