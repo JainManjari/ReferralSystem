@@ -12,7 +12,7 @@ const db=require('./config/mongoose');
 const session=require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport_local_strat');
-const MongoStore=require('connect-mongodb-session')(session);
+//const MongoStore=require('connect-mongodb-session')(session);
 const flash=require('connect-flash');
 const customMWare=require('./config/middleware');
 
@@ -42,16 +42,16 @@ app.use(session({
     cookie: {
         maxAge: (1000 * 60 * 100)
     },
-    store:new MongoStore(
-        {
-            mongooseConnection:db,
-            autoRemove:"disabled"
-        },
-        function(err)
-        {
-            console.log(err || "connect-mongodb ok");
-        }
-    )
+    // store:new MongoStore(
+    //     {
+    //         mongooseConnection:db,
+    //         autoRemove:"disabled"
+    //     },
+    //     function(err)
+    //     {
+    //         console.log(err || "connect-mongodb ok");
+    //     }
+    // )
 }));
 
 

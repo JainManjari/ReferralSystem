@@ -38,3 +38,5 @@ npm install
 npm start
 ```
 
+## You can visit this project on http://100.25.170.219:8000/
+
