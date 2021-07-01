@@ -52,6 +52,7 @@ header .links
 header .links a
 {
     margin: 2px;
+    font-weight: bolder;
 }
 
 header .links a:hover
