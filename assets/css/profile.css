@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     height: auto;
+    border: 2px dashed lightblue;
+    padding-top: 10px;
+    border-radius: 15px;
 }
 
 .referral-code-container .title
@@ -97,4 +100,104 @@
 {
 
 	box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.2);
+}
+
+
+.refers-list
+{
+    width: 75%;
+    margin: 70px auto;
+}
+
+
+.refers-list .title
+{
+    background: slateblue;
+    width: 331px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 19px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: bold;
+}
+
+.refers-list li
+{
+    list-style: none;
+    list-style: none;
+    display: flex;
+    margin: 15px;
+    font-size: 17px;
+    height: 50px;
+}
+
+.refers-list li::before
+{
+    content:'';
+	display: inline-block;
+	height: 25px;
+	width:40px;
+	background-repeat:no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url("/images/rewards2.png");
+}
+
+
+.refers-list li .info
+{
+    width: 65%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.refers-list li .info a
+{
+    color: grey;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.refers-list li .info a:hover,.refers-list li .info a:active
+{
+    color:lightgrey;
+}
+
+.refers-list li .info >div
+{
+    margin: 5px;
+}
+
+.refers-list li .rewards
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #81B562;
+}
+
+.refers-list .total-reward
+{
+    text-align: right;
+}
+
+.refers-list .total-reward .reward-title
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+.refers-list .total-reward .reward-money
+{
+    font-family: 'VT323';
+    font-size: 40px;
 }

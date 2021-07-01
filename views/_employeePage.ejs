@@ -15,3 +15,30 @@
         </ul>
     </div>
 </div>
+
+
+<% if(referees.length>0) {%>
+    <div class="refers-list">
+        <div class="title">Your Latest Referrals:</div>
+        <% for(let referee of referees) {%>
+            <li class="referee">
+                <div class="info">
+                    <div>
+                        <%= referee.firstName %>
+                        <%= referee.lastName %>
+                    </div>
+                    <div>
+                        <a href="mailto:<%=referee.email%>" target="_blank"><%= referee.email %></a>
+                    </div>
+                </div>
+                <div class="rewards">
+                    &#8377 100 Grofers Cashback
+                </div>
+            </li>
+        <% } %> 
+        <div class="total-reward">
+              <div class="reward-title">Total <img src="https://img.icons8.com/plasticine/50/000000/money.png"/> </div>
+              <div class="reward-money"><%= totalReward %></div>
+        </div>
+    </div>
+<% } %>
