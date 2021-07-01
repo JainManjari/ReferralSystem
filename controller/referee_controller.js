@@ -66,3 +66,15 @@ module.exports.createReferee=async function(req,res)
         return;
     }
 }
+
+module.exports.createSession = function (req, res) 
+{
+    req.flash("success", "Ascented Chivalrously!");
+    return res.redirect('/');
+}
+
+module.exports.destroySession = function (req, res) {
+    req.logout();
+    req.flash("success", "Descented Reminiscently!");
+    return res.redirect("/");
+}

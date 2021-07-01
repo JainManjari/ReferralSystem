@@ -19,6 +19,7 @@ let empLoginFormCreate=function()
                 <span>*</span>
                 <i id="pwd-input-icon" class="fas fa-eye"></i>
             </div>
+            <input type="hidden" name="referralCode" value="www">
             <button type="submit">Submit</button>
         </form>
     
@@ -30,7 +31,7 @@ let jobLoginFormCreate=function()
 {
     return $(`
     
-        <form action="/referess/create-session" method="post">
+        <form action="/referees/create-session" method="post">
             <div>
                 <input name="email" type="email" required placeholder="harrypotter@hogwarts.uk">
                 <span>*</span>
