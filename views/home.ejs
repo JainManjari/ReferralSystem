@@ -1,11 +1,15 @@
 <h1 class="welcome-heading">Welcome to the Referral</h1>
 
-<% if(title=="Referral Home") {%>
-    <%- include("_homeview"); %>
-<% } else if(title=="Referral Home | Employee SignUp") {%>
-    <%- include("_signUpEmp"); %>
-<% } else if(title=="Referral Home | Job Seeker SignUp") {%>
-    <%- include("_signUpJob"); %>
+<% if(!locals.user) {%>
+    <% if(title=="Referral Home") {%>
+        <%- include("_homeview"); %>
+    <% } else if(title=="Referral Home | Employee SignUp") {%>
+        <%- include("_signUpEmp"); %>
+    <% } else if(title=="Referral Home | Job Seeker SignUp") {%>
+        <%- include("_signUpJob"); %>
+    <% } %>
+<% } else { %>
+    <%- include("_userSession"); %>
 <% } %>
 
 <script type="text/javascript" src="/js/homeview.js"></script>

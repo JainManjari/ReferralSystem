@@ -1,5 +1,5 @@
 const Employee=require('../models/employees');
-const Referee=require('../models/referees');
+
 
 module.exports.signUpEmployee=function(req,res)
 {
@@ -12,9 +12,8 @@ module.exports.createEmployee=async function(req,res)
     {
         
         let employee=await Employee.findOne({email:req.body.email});
-        let referee=await Referee.findOne({email:req.body.email});
         let length=await Employee.count();
-        if(employee || referee)
+        if(employee)
         {
             return res.redirect("back");
         }
@@ -32,6 +31,7 @@ module.exports.createEmployee=async function(req,res)
                 password:req.body.password,
                 email:req.body.email,
                 referralCode:referral,
+                isEmployee:true
             }
             newEmployee=await Employee.create(newEmployee);
             console.log(newEmployee);
@@ -47,3 +47,17 @@ module.exports.createEmployee=async function(req,res)
         return;
     }
 }
+
+
+module.exports.createSession = function (req, res) 
+{
+ //   req.flash("success", "Ascented Chivalrously!");
+    return res.redirect('/');
+}
+
+module.exports.destroySession = function (req, res) {
+    req.logout();
+   // req.flash("success", "Descented Reminiscently!");
+    return res.redirect("/");
+}
+

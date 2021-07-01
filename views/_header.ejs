@@ -2,10 +2,19 @@
     <div class="logo">
         <a href="/">Referral</a>
     </div>
+    
 
     <div class="links">
-        <a href="/employees/sign-up">Sign Up For Employee</a>
-        <a href="/referees/sign-up">Sign Up For Job Seeker</a>
+        <% if(!locals.user) { %>
+            <a href="/employees/sign-up">Sign Up For Employee</a>
+            <a href="/referees/sign-up">Sign Up For Referee</a>
+        <% } else { %>
+            <% if(locals.user.isEmployee) { %>
+                <a href="/employees/sign-out">Sign Out</a>
+            <% } else {%>
+                <a href="/referees/sign-out">Sign Out</a>
+            <% } %>
+        <%} %>
     </div>
 
 </header>

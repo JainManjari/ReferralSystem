@@ -25,12 +25,22 @@ const employeeSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    isEmployee:
+    {
+        type:Boolean,
+        required:true
+    },
     referees:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:"Referee"
+            ref:"Employee"
         }
-    ]
+    ],
+    referedBy:
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Employee"
+    }
     
  
 },{

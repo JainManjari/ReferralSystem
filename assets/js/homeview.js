@@ -153,5 +153,5 @@ job.on("click",function(event)
         "align-items": "center",
         "border-radius": "15px"
     });
-    heading.html("Job Seeker");
+    heading.html("Referee");
 });
