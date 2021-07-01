@@ -1,6 +1,9 @@
 # Referral System
 
-This is a project made using Node Js and Mongo DB as the database.
+This is a clone of a referral portal. It allows employees to get the personalized referral code to refer their friends or families.
+It gives incentives to both the referee and the employee. It also depicts referral history and allows the employees to withdraw from the referral system.
+<br>
+The project used  Node Js for the backend and Mongo DB as the database.
 
 <br>
 
