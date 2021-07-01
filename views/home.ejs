@@ -1,15 +1,15 @@
 <% if(!locals.user) {%>
-    <h1 class="welcome-heading">Welcome to the Referral</h1>
+    <h1 class="welcome-heading">Welcome to the Grofers Referral Portal</h1>
 <% } else { %>
-    <h1 class="welcome-heading">Welcome to the Referral, <%= locals.user.firstName%> <span>:)</span>!</h1>
+    <h1 class="welcome-heading">Welcome to the Grofers Referral Portal, <%= locals.user.firstName%> <span>:)</span>!</h1>
 <% } %>
 
 <% if(!locals.user) {%>
-    <% if(title=="Referral Home") {%>
+    <% if(title=="Grofers") {%>
         <%- include("_homeview"); %>
-    <% } else if(title=="Referral Home | Employee SignUp") {%>
+    <% } else if(title=="Grofers | Employee SignUp") {%>
         <%- include("_signUpEmp"); %>
-    <% } else if(title=="Referral Home | Job Seeker SignUp") {%>
+    <% } else if(title=="Grofers | Referee SignUp") {%>
         <%- include("_signUpJob"); %>
     <% } %>
 <% } else { %>

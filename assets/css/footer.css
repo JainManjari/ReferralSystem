@@ -1,5 +1,4 @@
 #layout-footer {
-    background-color: #29AABD;
     color: white;
     width: 100%;
     height: auto;
@@ -8,7 +7,8 @@
     flex-wrap: wrap;
     padding: 0px 15px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 10px 0px #94C3DD;
+    background-color: #F36D24;
+    box-shadow: 0px 0px 10px 0px #e2b399;
     padding: 5px 0px;
     z-index: 400;
     font-family: 'VT323', monospace; 

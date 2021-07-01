@@ -33,7 +33,7 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
-    color: inherit;
+    color: antiquewhite;
     font-size: 18px;
 }
 
@@ -93,31 +93,33 @@
     position: absolute;
     right: 45px;
     top: 9px;
+    color: darkslategray;
 }
 
 .form-up form input
 {
     margin-bottom: 10px;
     padding: 5px;
-    background: darkslategray;
+    background: #fff3e0;
     border: none;
     border-bottom: 1px solid;
-    color: thistle;
+    color: maroon;
     width: 90%;
 }
 
 input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color:thistle; 
+    -webkit-text-fill-color:maroon; 
 }
 
 .form-up form button
 {
-    background: turquoise;
+    background: #ffb7af;
     height: 30px;
     width: 90px;
     margin: 15px auto 0px;
     color: black;
+    border-color: orange;
 }
 
 .form-up form button:hover
@@ -127,7 +129,7 @@ input:-webkit-autofill {
 
 .form-up form input::placeholder
 {
-    color: thistle;
+    color: maroon;
 }
 
 .form-up form input:focus,.form-up form button:focus

@@ -6,7 +6,7 @@ module.exports.signUpJob=function(req,res)
     {
         return res.redirect("back");
     }
-    return res.render("home",{"title":"Referral Home | Job Seeker SignUp"});
+    return res.render("home",{"title":"Grofers | Referee SignUp"});
 }
 
 
@@ -33,6 +33,11 @@ module.exports.createReferee=async function(req,res)
             console.log(referral);
 
             let refer=await Employee.findOne({referralCode:referral});
+            if(!refer)
+            {
+                req.flash("error", "Referral Code doesn't Match!");
+                return res.redirect("back");
+            }
 
             console.log("refer "+refer);
 
@@ -54,7 +59,7 @@ module.exports.createReferee=async function(req,res)
             console.log("refer 2 "+refer);
 
             req.flash("success", "Sign Up Done Right!");
-            return res.redirect("back");
+            return res.redirect("/");
 
         }
         

@@ -20,18 +20,18 @@ module.exports.home=async function(req,res)
                     email:user.referedBy.email
                 };
 
-                return res.render("home",{"title":"Referral Home","referedBy":referedBy});
+                return res.render("home",{"title":"Grofers","referedBy":referedBy});
             }
             else
             {
                 return res.render("home",{
-                    "title":"Referral Home",
+                    "title":"Grofers",
                     "referees":user.referees,
                     "totalReward":user.referees.length*100
                 });
             }
         }
-        return res.render("home",{"title":"Referral Home"});
+        return res.render("home",{"title":"Grofers"});
         
     }
     catch(err)

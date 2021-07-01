@@ -117,7 +117,8 @@ emp.on("click",function(event)
         "display": "flex",
         "justify-content": "center",
         "align-items": "center",
-        "border-radius": "15px"
+        "border-radius": "15px",
+        "color":"antiquewhite"
     });
     heading.html("Employee");
 });
@@ -152,7 +153,8 @@ job.on("click",function(event)
         "display": "flex",
         "justify-content": "center",
         "align-items": "center",
-        "border-radius": "15px"
+        "border-radius": "15px",
+        "color":"antiquewhite"
     });
     heading.html("Referee");
 });

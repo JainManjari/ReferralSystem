@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    border: 2px dashed lightblue;
+    border: 2px dashed #805533;
     padding-top: 10px;
     border-radius: 15px;
 }
@@ -32,7 +32,7 @@
     margin-top: 20px;
     padding: 0px 10px;
     background: #E6BE8A;
-    border: 5px dashed brown;
+    border: 5px dashed #CA3435;
     margin: 35px 0px;
 }
 
@@ -112,7 +112,7 @@
 
 .refers-list .title
 {
-    background: slateblue;
+    background: #D27D46;
     width: 331px;
     display: flex;
     justify-content: center;
@@ -166,7 +166,7 @@
 
 .refers-list li .info a:hover,.refers-list li .info a:active
 {
-    color:lightgrey;
+    color:#b79d9d;
 }
 
 .refers-list li .info >div

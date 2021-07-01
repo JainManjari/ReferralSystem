@@ -7,7 +7,7 @@ module.exports.signUpEmployee=function(req,res)
     {
         return res.redirect("back");
     }
-    return res.render("home",{"title":"Referral Home | Employee SignUp"});
+    return res.render("home",{"title":"Grofers | Employee SignUp"});
 }
 
 module.exports.createEmployee=async function(req,res)
@@ -42,7 +42,7 @@ module.exports.createEmployee=async function(req,res)
             newEmployee=await Employee.create(newEmployee);
             console.log(newEmployee);
             req.flash("success", "Sign Up Done Right!");
-            return res.redirect("back");
+            return res.redirect("/");
 
         }
         

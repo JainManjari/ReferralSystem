@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 header
 {
-    background-color: #29AABD;
-    box-shadow: 0px 0px 10px 0px #94C3DD;
+    background-color: #F36D24;
+    box-shadow: 0px 0px 10px 0px #e2b399;
     color: snow;
     height: 80px;
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 105px;
 }
 
 header a{
@@ -20,7 +20,7 @@ header a{
 
 header a:hover
 {
-    color:navy;
+    color:maroon;
     border-color: lightgrey;
     text-decoration: none;
 }
@@ -32,10 +32,15 @@ header .logo
     align-items: center;
     font-size: x-large;
     font-family: 'Yellowtail', cursive;
-    border: 2.2px dotted white;
+    /* border: 2.2px dotted white;
     padding: 5px;
     border-radius: 50%;
-    width: 105px;
+    width: 105px; */
+}
+
+header .logo a img
+{
+    height: 60px;
 }
 
 header .links
