@@ -5,7 +5,7 @@ This is a project made using Node Js and Mongo DB as the database.
 ## Installation
 
 - First download or clone the project
-- Install NVM (Ubuntu)
+- Install NVM (Ubuntu/WSL in VS Code)
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -37,6 +37,10 @@ npm install
 ```
 npm start
 ```
+
+- Learn the code on http://localhost:8000/
+
+- Contact Details: manjarijain98@gmail.com/9911134023
 
 ## You can visit this project on http://100.25.170.219:8000/
 
