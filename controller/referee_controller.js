@@ -39,7 +39,6 @@ module.exports.createReferee=async function(req,res)
                 return res.redirect("back");
             }
 
-            console.log("refer "+refer);
 
             let newReferee={
                 firstName:req.body.firstName,
