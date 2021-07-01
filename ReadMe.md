@@ -2,6 +2,8 @@
 
 This is a project made using Node Js and Mongo DB as the database.
 
+<br>
+
 ## Installation
 
 - First download or clone the project
@@ -39,8 +41,15 @@ npm start
 ```
 
 - Learn the code on http://localhost:8000/
+<br>
+<br>
 
-- Contact Details: manjarijain98@gmail.com/9911134023
+## Resume and Cover Letter has also been uploaded in "Manjari Jain" Folder.
+
+<br>
 
 ## You can visit this project on http://100.25.170.219:8000/
+<br>
+
+## Contact Details: manjarijain98@gmail.com/9911134023
 
