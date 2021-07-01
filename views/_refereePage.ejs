@@ -1,1 +1,19 @@
-Referee
+<div class="referral-code-container">
+    <div class="title">Your Referred Code</div>
+    <div class="referral-code"> 
+        <%= locals.user.referralCode %> 
+    </div>
+</div>
+
+<div class="refered-by">
+    <span class="congrats-word">
+        Congratulations 
+        <img src="https://img.icons8.com/doodle/50/000000/the-toast--v2.png"/>!
+    </span> 
+    <br>
+    Because of your successful referral
+    <%= referedBy.firstName %>
+    <%= referedBy.lastName %>
+    <a href="mailto:<%=referedBy.email%>" target="_blank"><%= referedBy.email %></a>
+    was able to get &#8377 100 Grofers Cashback!
+</div>

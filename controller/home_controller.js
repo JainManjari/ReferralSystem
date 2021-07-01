@@ -11,10 +11,16 @@ module.exports.home=async function(req,res)
                 options:{
                     sort:"-createdAt"
                 }
-            });
+            }).populate("referedBy");
             if(!user.isEmployee)
             {
-                return res.render("home",{"title":"Referral Home"});
+                let referedBy={
+                    firstName:user.referedBy.firstName,
+                    lastName:user.referedBy.lastName,
+                    email:user.referedBy.email
+                };
+
+                return res.render("home",{"title":"Referral Home","referedBy":referedBy});
             }
             else
             {

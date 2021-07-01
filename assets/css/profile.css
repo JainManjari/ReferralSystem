@@ -201,3 +201,34 @@
     font-family: 'VT323';
     font-size: 40px;
 }
+
+
+
+
+.refered-by
+{
+    width: 75%;
+    margin: 70px auto;
+    font-family: 'Antic', sans-serif;
+    font-size: 18px;
+}
+
+.refered-by .congrats-word
+{
+    font-family: 'Lobster', cursive;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.refered-by a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.refered-by a:hover,.refered-by a:active
+{
+    color: lightgrey;
+    text-decoration: none;
+}
