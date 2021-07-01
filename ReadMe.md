@@ -40,7 +40,7 @@ npm install
 npm start
 ```
 
-- Learn the code on http://localhost:8000/
+- Run the code on http://localhost:8000/
 <br>
 <br>
 
