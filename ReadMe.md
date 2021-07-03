@@ -2,9 +2,11 @@
 
 This is a clone of a referral portal. It allows employees to get the personalized referral code to refer their friends or families.
 It gives incentives to both the referee and the employee. It also depicts referral history and giving an option to the employees/referees to withdraw from the referral system if they want to.
-It also sends out emails and notifications
 <br>
-This project uses  Node Js for the backend and Mongo DB as the database.
+It also sends out <b>emails and notifications</b>. Kindly request you
+to use real email addresses to see the effect.
+<br>
+This project uses  Node Js for the backend and Mongo DB for the database.
 
 <br>
 
@@ -69,5 +71,5 @@ redis-server
 ## You can visit this project on http://100.25.170.219:8000/
 <br>
 
-## Contact Details: manjarijain98@gmail.com/9911134023
+## For further assistance please reach me @ manjarijain98@gmail.com/9911134023
 
