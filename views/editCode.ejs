@@ -1,0 +1,13 @@
+<% if(!locals.user || !employee.isEmployee) {%>
+    <h1>You don't have access to this Page, Mate!</h1>
+<% }  else { %>
+    <h1 class="edit-code-heading">
+        Edit Your Referral Code here, <%=employee.firstName%> 
+    </h1>
+      
+    <form action="/employees/edit-code" method="post" class="edit-code-form">
+            <textarea name="new-referral"><%= employee.referralCode %></textarea>
+            <button type="submit">Update</button>
+    </form>
+    <script type="text/javascript" src="/js/editCode.js"></script>
+<% } %>

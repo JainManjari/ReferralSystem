@@ -96,3 +96,29 @@ module.exports.deleteAccount= async function(req,res)
         return;
     }
 }
+
+
+module.exports.editCodePage = async function(req,res)
+{
+    try
+    {
+        if(!req.isAuthenticated())
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        if(!req.user.isEmployee)
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+
+        let employee=await Employee.findById(req.user.id);
+        return res.render("editCode",{"title":"Grofers | Edit Code","employee":employee});
+    
+    }
+    catch(err)
+    {
+        console.log("Error in fetching Edit Code Page "+err);
+    }
+}

@@ -13,4 +13,6 @@ router.post('/create-session', passport.authenticate(
 router.get("/sign-out",employeeController.destroySession);
 router.get("/delete-account",employeeController.deleteAccount);
 
+router.get("/edit-code",passport.checkAuthentication,employeeController.editCodePage);
+
 module.exports=router;

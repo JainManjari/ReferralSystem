@@ -1,0 +1,40 @@
+.edit-code-heading
+{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Cinzel';
+}
+
+.edit-code-form
+{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    flex-direction: column;
+    width: 230px;
+}
+
+.edit-code-form textarea
+{
+    margin-bottom: 20px;
+    resize: none;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    font-size: 18px;
+}
+
+.edit-code-form textarea:focus
+{
+    outline: none;
+}
+
+.edit-code-form button
+{
+    height: 37px;
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    background: lightgreen;
+}

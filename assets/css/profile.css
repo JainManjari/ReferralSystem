@@ -103,6 +103,25 @@
 }
 
 
+.change-code
+{
+    display: flex;
+    justify-content: center;
+}
+
+.change-code a
+{
+    color: brown;
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 5px
+}
+
+.change-code a:hover
+{
+    color:black;
+}
+
 .refers-list
 {
     width: 75%;
