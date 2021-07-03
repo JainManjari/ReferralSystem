@@ -29,14 +29,26 @@ nvm install 10.19.0
 ```
 
 - Mongo DB has been deployed on Atlas. No need to install it on desktop. 
+<br>
+You can use your own account of atlas or uncomment line 2 to use local mongo db at your laptop.
+<img src="assets/images/mongoose.JPG" >
 
 
 - To install redis-server for sending out mails.
 ```
 sudo apt-get install redis-server
-
-redis-cli ping 
 ```
+
+After this command, you can cross-check whether redis-server has been
+properly installed or not:
+```
+redis-cli ping
+```
+<img src="assets/images/redis.JPG" >
+
+- You can use your own gmail address and password to send out emails by replacing these lines 11 and 12 by your info.
+
+<img src="assets/images/nodemailer.JPG" >
 
 
 - Open the project directory on cmd prompt and install nodemon
