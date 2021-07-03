@@ -15,6 +15,13 @@ queue.process("refereeRegistered",function(job,done)
 });
 
 
+queue.process("refereeRemoved",function(job,done)
+{
+    employeeMailer.refereeRemove(job.data);
+    done();
+});
+
+
 queue.process("updateReferralCode",function(job,done)
 {
     employeeMailer.updateReferralCode(job.data);

@@ -48,6 +48,29 @@ exports.refereeSignUp=(user)=>{
 
 
 
+ exports.refereeRemove=(user)=>{
+
+    // console.log("employee mailer signup "+user.email+" "+process.env.GROFERS_GMAIL_USERNAME);
+ 
+     let htmlString=nodemailer.renderTemplate({user:user},"/employees/referee_remove_email.ejs");
+ 
+     nodemailer.transporter.sendMail({
+         from:process.env.GROFERS_GMAIL_USERNAME,
+         to:user.refer.email,
+         subject:`Your referee ${user.referee.firstName} has removed their account!`,
+         html:htmlString
+     },(err,info)=>{
+         if(err)
+         {
+             console.log("Error in sending mail for new signup ",err);
+             return;
+         }
+        // console.log("Email sent: ",info);
+         return;
+     })
+ }
+
+
 
 
 exports.updateReferralCode=(user)=>{

@@ -132,6 +132,22 @@ module.exports.deleteAccount= async function(req,res)
         refer.referees.pull(referee);
         refer.save();
 
+        let newData={
+            referee:referee,
+            refer:refer
+        }
+
+        
+        let job=queue.create("refereeRemoved",newData).save(function(err)
+        {
+                if(err)
+                {
+                    console.log("error in creating a queue ",err);
+                    return;
+                }
+                console.log("employee job enqueued " ,job.id);
+ 
+        });
 
         req.logout();
         req.flash("success", "Erased!!");
