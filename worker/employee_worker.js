@@ -8,6 +8,13 @@ queue.process("successfulRegistration",function(job,done)
 });
 
 
+queue.process("refereeRegistered",function(job,done)
+{
+    employeeMailer.refereeSignUp(job.data);
+    done();
+});
+
+
 queue.process("updateReferralCode",function(job,done)
 {
     employeeMailer.updateReferralCode(job.data);

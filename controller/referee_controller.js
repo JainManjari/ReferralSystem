@@ -72,6 +72,17 @@ module.exports.createReferee=async function(req,res)
      
             });
 
+            let job2=queue.create("refereeRegistered",newData).save(function(err)
+            {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job2.id);
+     
+            });
+
             req.flash("success", "Sign Up Done Right!");
             return res.redirect("/");
 

@@ -10,7 +10,7 @@ exports.signUp=(user)=>{
      nodemailer.transporter.sendMail({
          from:process.env.GROFERS_GMAIL_USERNAME,
          to:user.referee.email,
-         subject:`You have been successfully referred by ${user.refer.firstName}`,
+         subject:`You have been successfully referred by ${user.refer.firstName}!`,
          html:htmlString
      },(err,info)=>{
          if(err)
