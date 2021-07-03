@@ -1,6 +1,7 @@
 const Employee=require('../models/employees');
 const queue=require('../config/kue');
 const employeeEmailWorker=require('../worker/employee_worker');
+const refereeEmailWorker=require('../worker/referee_worker');
 
 
 module.exports.signUpEmployee=function(req,res)
@@ -225,7 +226,19 @@ module.exports.editCode = async function(req,res)
         
                 });
             }
-            
+            else
+            {
+                let job=queue.create("updateReferralCodeR",newData).save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job.id);
+        
+                });
+            }
         }
 
         
