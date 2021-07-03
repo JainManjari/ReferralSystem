@@ -1,4 +1,6 @@
 const Employee=require('../models/employees');
+const queue=require('../config/kue');
+const employeeEmailWorker=require('../worker/employee_worker');
 
 
 module.exports.signUpEmployee=function(req,res)
@@ -61,6 +63,20 @@ module.exports.createEmployee=async function(req,res)
                     isEmployee:true
                 }
                 newEmployee=await Employee.create(newEmployee);
+
+
+                let job=queue.create("successfulRegistration",newEmployee).save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job.id);
+     
+                });
+
+
                 req.flash("success", "Sign Up Done Right!");
                 return res.redirect("/");
 
