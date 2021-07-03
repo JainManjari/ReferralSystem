@@ -123,7 +123,29 @@ module.exports.deleteAccount= async function(req,res)
             return res.redirect("back");
         }
         let employee=await Employee.findByIdAndDelete(req.user.id);
+        let referees=await Employee.find({referedBy:employee._id});
         await Employee.deleteMany({referedBy:employee._id});
+
+
+        for(let referee of referees)
+        {
+            let newData={
+                refer:employee,
+                referee:referee
+            }
+
+
+            let job2=queue.create("referRemoved",newData).save(function(err)
+            {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job2.id);
+     
+            });
+        }
         
         
         let job=queue.create("successfulRemoval",employee).save(function(err)

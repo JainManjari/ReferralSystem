@@ -70,3 +70,28 @@ exports.updateReferralCode=(user)=>{
          return;
      })
  }
+
+
+
+
+ exports.referRemoval=(user)=>{
+
+     console.log("referee mailer refer removal "+user.refer+" ");
+    
+     let htmlString=nodemailer.renderTemplate({user:user},"/referees/refer_remove_email.ejs");
+ 
+     nodemailer.transporter.sendMail({
+         from:process.env.GROFERS_GMAIL_USERNAME,
+         to:user.referee.email,
+         subject:`Your Referral Person ${user.refer.firstName} has removed their account!`,
+         html:htmlString
+     },(err,info)=>{
+         if(err)
+         {
+             console.log("Error in sending mail for refer removal ",err);
+             return;
+         }
+        // console.log("Email sent: ",info);
+         return;
+     })
+ }
