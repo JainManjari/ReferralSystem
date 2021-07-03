@@ -221,7 +221,7 @@
     font-size: 40px;
 }
 
-.delete-emp-acct
+.delete-emp-acct,.delete-job-acct
 {
     margin: auto;
     width: 50%;
@@ -230,7 +230,7 @@
     margin-top: 100px;
 }
 
-.delete-emp-acct a
+.delete-emp-acct a,.delete-job-acct a
 {
     text-decoration: none;
     color: darkred;

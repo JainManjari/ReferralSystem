@@ -29,8 +29,7 @@ module.exports.createReferee=async function(req,res)
         }
         else
         {
-            let referral=req.body.referralCode.toUpperCase();
-            console.log(referral);
+            let referral=req.body.referralCode.toUpperCase().trim().split(" ").join("");;
 
             let refer=await Employee.findOne({referralCode:referral});
             if(!refer)
@@ -79,4 +78,40 @@ module.exports.destroySession = function (req, res) {
     req.logout();
     req.flash("success", "Descented Reminiscently!");
     return res.redirect("/");
+}
+
+
+
+
+module.exports.deleteAccount= async function(req,res)
+{
+    try
+    {
+        if(!req.isAuthenticated())
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        if(req.user.isEmployee)
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        let referee=await Employee.findByIdAndDelete(req.user.id);
+        let refer =await Employee.findById(referee.referedBy);
+
+        refer.referees.pull(referee);
+        refer.save();
+
+
+        req.logout();
+        req.flash("success", "Erased!!");
+        return res.redirect("/");
+
+    }
+    catch(err)
+    {
+        console.log("error in deleting employee account "+err);
+        return;
+    }
 }
