@@ -16,7 +16,6 @@ module.exports.createEmployee=async function(req,res)
     {
         
         let employee=await Employee.findOne({email:req.body.email});
-        let length=await Employee.count();
         if(employee)
         {
             req.flash("error", "This email is already in work!");
@@ -29,18 +28,41 @@ module.exports.createEmployee=async function(req,res)
         }
         else
         {
-            let referral=req.body.firstName.substring(0,3).toUpperCase()+""+(length+1)*10+req.body.lastName.substring(0,3).toUpperCase();
-            let newEmployee={
-                firstName:req.body.firstName,
-                lastName:req.body.lastName,
-                password:req.body.password,
-                email:req.body.email,
-                referralCode:referral,
-                isEmployee:true
+            let firstName=req.body.firstName;
+            let lastName=req.body.lastName;
+            console.log(firstName,lastName);
+            referral=firstName.substring(0,3).toUpperCase();
+            while(referral.length<3)
+            {
+                referral+=referral.charAt(0);
             }
-            newEmployee=await Employee.create(newEmployee);
-            req.flash("success", "Sign Up Done Right!");
-            return res.redirect("/");
+            referral+=lastName.substring(0,3).toUpperCase();
+            while(referral.length<6)
+            {
+                referral+=lastName.charAt(0).toUpperCase();
+            }
+
+            while(true)
+            {
+                referral=referral.slice(0,3)+""+Math.floor(Math.random()*10)+""+Math.floor(Math.random()*10)+referral.slice(3);
+                let employee=await Employee.findOne({referralCode:referral});
+                if(!employee)
+                {
+                    break;
+                }
+            }
+
+                let newEmployee={
+                    firstName:req.body.firstName,
+                    lastName:req.body.lastName,
+                    password:req.body.password,
+                    email:req.body.email,
+                    referralCode:referral,
+                    isEmployee:true
+                }
+                newEmployee=await Employee.create(newEmployee);
+                req.flash("success", "Sign Up Done Right!");
+                return res.redirect("/");
 
         }
         
@@ -120,5 +142,56 @@ module.exports.editCodePage = async function(req,res)
     catch(err)
     {
         console.log("Error in fetching Edit Code Page "+err);
+    }
+}
+
+
+
+
+module.exports.editCode = async function(req,res)
+{
+    try
+    {
+        if(!req.isAuthenticated())
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+        if(!req.user.isEmployee)
+        {
+            req.flash("error","You don't have the access!");
+            return res.redirect("back");
+        }
+
+        let employee=await Employee.findById(req.user.id);
+        
+        let newReferral=req.body.newReferral.toUpperCase().trim().split(" ").join("");
+
+        console.log(newReferral,newReferral.length);
+        if(newReferral.length!=8)
+        {
+            req.flash("error","The length should be of 8!");
+            return res.redirect("back");
+        }
+        if(employee.referralCode==newReferral)
+        {
+            req.flash("error","Its the same code!");
+            return res.redirect("back");
+        }
+
+        let employee2=await Employee.findOne({referralCode:newReferral});
+
+        if(employee2)
+        {
+            req.flash("error","This code already exists!");
+            return res.redirect("back");
+        }
+
+        return res.redirect("back");
+    
+    }
+    catch(err)
+    {
+        console.log("Error in Updating Code "+err);
     }
 }

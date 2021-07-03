@@ -6,7 +6,7 @@
     </h1>
       
     <form action="/employees/edit-code" method="post" class="edit-code-form">
-            <textarea name="new-referral"><%= employee.referralCode %></textarea>
+            <textarea name="newReferral" required><%= employee.referralCode %></textarea>
             <button type="submit">Update</button>
     </form>
     <script type="text/javascript" src="/js/editCode.js"></script>
