@@ -167,7 +167,6 @@ module.exports.editCode = async function(req,res)
         
         let newReferral=req.body.newReferral.toUpperCase().trim().split(" ").join("");
 
-        console.log(newReferral,newReferral.length);
         if(newReferral.length!=8)
         {
             req.flash("error","The length should be of 8!");
@@ -187,7 +186,16 @@ module.exports.editCode = async function(req,res)
             return res.redirect("back");
         }
 
-        return res.redirect("back");
+        let employees=await Employee.find({referralCode:employee.referralCode});
+
+        for(let emp of employees)
+        {
+            emp.referralCode=newReferral;
+            emp.save();
+        }
+
+        req.flash("success","Your referral Code has been updated");
+        return res.redirect("/");
     
     }
     catch(err)
