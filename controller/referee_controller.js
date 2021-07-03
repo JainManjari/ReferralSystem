@@ -1,4 +1,8 @@
 const Employee=require('../models/employees');
+const queue=require('../config/kue');
+const employeeEmailWorker=require('../worker/employee_worker');
+const refereeEmailWorker=require('../worker/referee_worker');
+
 
 module.exports.signUpJob=function(req,res)
 {
@@ -16,7 +20,6 @@ module.exports.createReferee=async function(req,res)
     {
         
         let referee=await Employee.findOne({email:req.body.email});
-        let length=await Employee.count();
         if(referee)
         {
             req.flash("error", "This email is already in work!");
@@ -53,6 +56,21 @@ module.exports.createReferee=async function(req,res)
             refer.referees.push(newReferee);
             refer.save();
 
+            let newData={
+                referee:newReferee,
+                refer:refer
+            }
+
+            let job=queue.create("successfulRegistrationR",newData).save(function(err)
+            {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job.id);
+     
+            });
 
             req.flash("success", "Sign Up Done Right!");
             return res.redirect("/");
