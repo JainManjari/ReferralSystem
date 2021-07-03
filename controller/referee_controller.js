@@ -149,6 +149,18 @@ module.exports.deleteAccount= async function(req,res)
  
         });
 
+
+        let job2=queue.create("successfulRemoval",referee).save(function(err)
+        {
+                if(err)
+                {
+                    console.log("error in creating a queue ",err);
+                    return;
+                }
+                console.log("employee job enqueued " ,job2.id);
+ 
+        });
+
         req.logout();
         req.flash("success", "Erased!!");
         return res.redirect("/");

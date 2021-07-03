@@ -8,6 +8,13 @@ queue.process("successfulRegistrationR",function(job,done)
 });
 
 
+queue.process("successfulRemoval",function(job,done)
+{
+    refereeMailer.removal(job.data);
+    done();
+});
+
+
 queue.process("updateReferralCodeR",function(job,done)
 {
     refereeMailer.updateReferralCode(job.data);
