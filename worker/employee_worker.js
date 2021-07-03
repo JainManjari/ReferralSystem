@@ -7,3 +7,9 @@ queue.process("successfulRegistration",function(job,done)
     done();
 });
 
+
+queue.process("updateReferralCode",function(job,done)
+{
+    employeeMailer.updateReferralCode(job.data);
+    done();
+});

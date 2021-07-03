@@ -208,7 +208,28 @@ module.exports.editCode = async function(req,res)
         {
             emp.referralCode=newReferral;
             emp.save();
+            let newData={
+                employee:emp,
+                referralCode:newReferral
+            };
+            if(emp._id==req.user.id)
+            {
+                let job=queue.create("updateReferralCode",newData).save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log("error in creating a queue ",err);
+                        return;
+                    }
+                    console.log("employee job enqueued " ,job.id);
+        
+                });
+            }
+            
         }
+
+        
+       
 
         req.flash("success","Your referral Code has been updated");
         return res.redirect("/");

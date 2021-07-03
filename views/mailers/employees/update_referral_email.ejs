@@ -1,0 +1,45 @@
+<head>
+    <style>
+        img{
+            width: 28px;
+            height: 23px;
+        }
+        #sign-p > span{
+            
+            margin-top: 0px;
+            display: flex;
+            align-items: flex-end;
+        }
+        #sign-p >span span{
+            margin-top: 4px;
+        }
+
+
+    </style>
+</head>
+<div>
+    <p>
+        Hi <%= user.employee.firstName %>,
+    </p>
+    <br> 
+    <p>This is to inform you that your referral code has been updated!</p>
+    <p id="login-p"><br>
+                Here is your new referral code:
+                <br>
+                <span style="margin-top: 10px;margin-left: 60px;">
+                    ReferralCode: <strong> <%= user.referralCode %></strong>
+                </span>
+                <br>
+                <br>
+               
+    </p>
+    <p>
+        All your referees will also be notified about this updation.
+    </p>
+    <br><br>
+    <span>Looking forward for your contribution.</span>
+    <br>
+    <p id="sign-p">With best regards,<br>
+        <span> <span>Grofers Referral Team</span> <img src="https://avatars.githubusercontent.com/u/8791674?s=280&v=4"></span>
+     </p>
+</div>
