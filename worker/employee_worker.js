@@ -27,3 +27,11 @@ queue.process("updateReferralCode",function(job,done)
     employeeMailer.updateReferralCode(job.data);
     done();
 });
+
+
+
+queue.process("successfulRemoval",function(job,done)
+{
+    employeeMailer.removal(job.data);
+    done();
+});

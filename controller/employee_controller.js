@@ -124,6 +124,20 @@ module.exports.deleteAccount= async function(req,res)
         }
         let employee=await Employee.findByIdAndDelete(req.user.id);
         await Employee.deleteMany({referedBy:employee._id});
+        
+        
+        let job=queue.create("successfulRemoval",employee).save(function(err)
+        {
+                if(err)
+                {
+                    console.log("error in creating a queue ",err);
+                    return;
+                }
+                console.log("employee job enqueued " ,job.id);
+ 
+        });
+
+
         req.logout();
         req.flash("success", "Erased!!");
         return res.redirect("/");

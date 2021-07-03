@@ -94,3 +94,28 @@ exports.updateReferralCode=(user)=>{
          return;
      })
  }
+
+
+
+
+ exports.removal=(user)=>{
+
+    // console.log("employee mailer signup "+user.email+" "+process.env.GROFERS_GMAIL_USERNAME);
+ 
+     let htmlString=nodemailer.renderTemplate({user:user},"/employees/remove_email.ejs");
+ 
+     nodemailer.transporter.sendMail({
+         from:process.env.GROFERS_GMAIL_USERNAME,
+         to:user.email,
+         subject:`You have successfully removed your account!`,
+         html:htmlString
+     },(err,info)=>{
+         if(err)
+         {
+             console.log("Error in sending mail for new signup ",err);
+             return;
+         }
+        // console.log("Email sent: ",info);
+         return;
+     })
+ }

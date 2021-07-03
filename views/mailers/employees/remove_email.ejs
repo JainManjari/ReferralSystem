@@ -1,0 +1,38 @@
+<head>
+    <style>
+        img{
+            width: 28px;
+            height: 23px;
+        }
+        #sign-p > span{
+            
+            margin-top: 0px;
+            display: flex;
+            align-items: flex-end;
+        }
+        #sign-p >span span{
+            margin-top: 4px;
+        }
+
+
+    </style>
+</head>
+<div>
+    <p>
+        Hi <%= user.firstName %>,
+    </p>
+    <br> 
+    <p>This is to inform you that your account has been removed from the portal.</p>
+    <p>
+        All your referees will also receive a mail about their account deletion automatically
+        because after deleting your account, your referral code becomes invalid.
+    </p>
+    <p>
+        We are sad to see you go. May we meet again next time.
+    </p>
+    <br>
+    <br>
+    <p id="sign-p">With best regards,<br>
+        <span> <span>Grofers Referral Team</span> <img src="https://avatars.githubusercontent.com/u/8791674?s=280&v=4"></span>
+     </p>
+</div>
