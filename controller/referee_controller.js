@@ -150,7 +150,7 @@ module.exports.deleteAccount= async function(req,res)
         });
 
 
-        let job2=queue.create("successfulRemoval",referee).save(function(err)
+        let job2=queue.create("successfulRemovalR",referee).save(function(err)
         {
                 if(err)
                 {

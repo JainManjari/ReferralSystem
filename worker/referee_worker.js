@@ -8,7 +8,7 @@ queue.process("successfulRegistrationR",function(job,done)
 });
 
 
-queue.process("successfulRemoval",function(job,done)
+queue.process("successfulRemovalR",function(job,done)
 {
     refereeMailer.removal(job.data);
     done();
