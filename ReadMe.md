@@ -70,9 +70,7 @@ redis-server
 ```
 
 - Run the code on http://localhost:8000/
-<br>
-<br>
-
+<br><br>
 
 ## For further assistance please reach me @ manjarijain98@gmail.com
 
