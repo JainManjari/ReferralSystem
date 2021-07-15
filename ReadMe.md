@@ -28,7 +28,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install 10.19.0
 ```
 
-- Mongo DB has been deployed on Atlas. No need to install it on desktop. 
+- Please download mongo db on your system by this <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">Link</a> or you can also use your atlas account. 
 
 
 - To install redis-server for sending out mails.
