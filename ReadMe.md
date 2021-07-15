@@ -58,14 +58,16 @@ npm install -g nodemon
 ```
 npm install
 ```
+<br>
 
-- To start the project
+## To start the project
+<br>
 
-Open one terminal
+- Open one terminal
 ```
 npm start
 ```
-Open other terminal
+- Open other terminal
 ```
 redis-server
 ```
