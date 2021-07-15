@@ -14,13 +14,14 @@ passport.use(new LocalStrategy({
     function(req,email, password, done){
         // find a user and establish the identity
         referralCode=req.body.referralCode.toUpperCase();
+       // console.log("ref "+referralCode);
         Employee.findOne({email: email}, function(err, user)  {
             if (err){
                 req.flash("error",err);
                 return done(err);
             }
-            if (!user || user.password != password || (!user.isEmployee && user.referralCode!=referralCode) || (user.isEmployee && user.referralCode==referralCode)){
-                //console.log('Invalid Username/Password');
+            if (!user || user.password != password || (!user.isEmployee && user.referralCode!=referralCode) || (user.isEmployee && referralCode!="")){
+               // console.log('Invalid Username/Password');
                 req.flash("error","Invalid details!!");
                 return done(null, false);
                 

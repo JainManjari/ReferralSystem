@@ -19,7 +19,7 @@ let empLoginFormCreate=function()
                 <span>*</span>
                 <i id="pwd-input-icon" class="fas fa-eye"></i>
             </div>
-            <input type="hidden" name="referralCode" value="www">
+            <input type="hidden" name="referralCode" value="">
             <button type="submit">Submit</button>
         </form>
     
