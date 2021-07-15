@@ -10,7 +10,7 @@ module.exports.signUpEmployee=function(req,res)
     {
         return res.redirect("back");
     }
-    return res.render("home",{"title":"Grofers | Employee SignUp"});
+    return res.render("home",{"title":"Referral | Employee SignUp"});
 }
 
 module.exports.createEmployee=async function(req,res)
@@ -189,7 +189,7 @@ module.exports.editCodePage = async function(req,res)
         }
 
         let employee=await Employee.findById(req.user.id);
-        return res.render("editCode",{"title":"Grofers | Edit Code","employee":employee});
+        return res.render("editCode",{"title":"Referral | Edit Code","employee":employee});
     
     }
     catch(err)

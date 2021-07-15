@@ -10,7 +10,7 @@ module.exports.signUpJob=function(req,res)
     {
         return res.redirect("back");
     }
-    return res.render("home",{"title":"Grofers | Referee SignUp"});
+    return res.render("home",{"title":"Referral | Referee SignUp"});
 }
 
 

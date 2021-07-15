@@ -29,9 +29,6 @@ nvm install 10.19.0
 ```
 
 - Mongo DB has been deployed on Atlas. No need to install it on desktop. 
-<br>
-You can use your own account of atlas or uncomment line 2 to use local mongo db at your laptop.
-<img src="assets/images/mongoose.JPG" >
 
 
 - To install redis-server for sending out mails.
@@ -76,12 +73,6 @@ redis-server
 <br>
 <br>
 
-## Resume and Cover Letter has also been uploaded in "Manjari Jain" Folder.
 
-<br>
-
-## You can visit this project on http://100.25.170.219:8000/
-<br>
-
-## For further assistance please reach me @ manjarijain98@gmail.com/9911134023
+## For further assistance please reach me @ manjarijain98@gmail.com
 

@@ -5,11 +5,11 @@
 <% } %>
 
 <% if(!locals.user) {%>
-    <% if(title=="Grofers") {%>
+    <% if(title=="Referral") {%>
         <%- include("_homeview"); %>
-    <% } else if(title=="Grofers | Employee SignUp") {%>
+    <% } else if(title=="Referral | Employee SignUp") {%>
         <%- include("_signUpEmp"); %>
-    <% } else if(title=="Grofers | Referee SignUp") {%>
+    <% } else if(title=="Referral | Referee SignUp") {%>
         <%- include("_signUpJob"); %>
     <% } %>
 <% } else { %>

@@ -8,8 +8,8 @@ let transporter=nodemailer.createTransport({
         port:587,
         secure:false,
         auth:{
-            user:process.env.GROFERS_GMAIL_USERNAME,
-            pass:process.env.GROFERS_GMAIL_PASSWORD
+            user:process.env.REFERRAL_GMAIL_USERNAME,
+            pass:process.env.REFERRAL_GMAIL_PASSWORD
         }
     
 });

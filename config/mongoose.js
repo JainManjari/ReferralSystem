@@ -1,13 +1,5 @@
 const mongoose=require('mongoose');
-//mongoose.connect("mongodb://localhost/referral_db");
-
-const URL = `mongodb+srv://Manjari:${process.env.GROFERS_MONGODB_PWD}@cluster0.ljcc2.mongodb.net/referral_system?retryWrites=true&w=majority`
-
-mongoose.connect(URL,{
-    useUnifiedTopology:true,
-    useNewUrlParser:true
-});
-
+mongoose.connect("mongodb://localhost/referral_db");
 
 const db=mongoose.connection;
 
