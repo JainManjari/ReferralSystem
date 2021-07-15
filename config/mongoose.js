@@ -1,5 +1,13 @@
 const mongoose=require('mongoose');
-mongoose.connect("mongodb://localhost/referral_db");
+//mongoose.connect("mongodb://localhost/referral_db");
+
+const URL = `${process.env.REFERRAL_MONGODB_URL}`;
+
+mongoose.connect(URL,{
+    useUnifiedTopology:true,
+    useNewUrlParser:true
+});
+
 
 const db=mongoose.connection;
 
