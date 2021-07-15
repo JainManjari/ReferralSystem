@@ -33,6 +33,7 @@ nvm install 10.19.0
 
 - To install redis-server for sending out mails.
 ```
+sudo apt-get update
 sudo apt-get install redis-server
 ```
 
