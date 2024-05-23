@@ -250,45 +250,46 @@ RESPONSE
 ```
 
 ### Current Architecture
+<img width="832" alt="currentarch" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/ed931e7c-a3b5-4f9e-96eb-0be229ae4a3e">
 
-<img src="assets/images/currentarch.png" height="1000px" width="1500px">
+
 
 ### Screenshots
 
 <ol>
     <li> 
         <h3>Home Page</h3>
-        <img src="assets/images/home.png" height="800px" width="1200px" style="margin:auto;">
+        <img width="1788" alt="home" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/97a8f0d7-ac43-4573-b888-9d900ade02b9">
         <br>
         <br>
     </li>
     <li>
-        <h3>Employee sign in</h3>
-        <img src="assets/images/signupemployee.png" height="800px" width="1200px" style="margin:auto;">
+        <h3>Employee sign up</h3>
+        <img width="1699" alt="signupemployee" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/db6afa55-3725-4fbb-8772-ef5cb8967911">
         <br>
         <br>
     </li>
     <li>
-        <h3>Referee sign in</h3>
-        <img src="assets/images/refereelogin.png" height="800px" width="1200px" style="margin:auto;">
+        <h3>Referee sign up</h3>
+        <img width="1680" alt="signupreferee" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/3e07bfd9-0aa9-452e-a3a2-01a679d95de4">
         <br>
         <br>
     </li>
     <li>
         <h3>Employee login in</h3>
-        <img src="assets/images/employeelogin.png" height="800px" width="1200px" style="margin:auto;">
+        <img width="1688" alt="employeelogin" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/f052e855-ec10-4a5c-8b53-753fd8358e0d">
         <br>
         <br>
     </li>
        <li>
         <h3>Referee login in</h3>
-        <img src="assets/images/refereelogin.png" height="800px" width="1200px" style="margin:auto;">
+        <img width="1704" alt="refereelogin" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/e65c7ffb-356c-4b4c-b1f0-f6a4b2ca051a">
         <br>
         <br>
     </li>
        <li>
         <h3>Employee sign in after referring</h3>
-        <img src="assets/images/employeeloginafterreferring.png" height="800px" width="1200px" style="margin:auto;">
+        <img width="1594" alt="employeeloginafterreferring" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/ae736469-0c71-41ff-8aae-6981da6af036">
         <br>
         <br>
     </li>
