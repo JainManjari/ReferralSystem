@@ -3,6 +3,17 @@
 It allows employees to get the personalized referral code for referring their friends or families.
 This project uses Node Js for the backend and Mongo DB for the database.
 
+## Topics
+1. [Functional Requirements](#functional-requirements).
+2. [Entities](#entities).
+3. [High Level of API Designs](#high-level-of-api-designs).
+4. [Current Architecture](#current-architecture).
+5. [Screenshots](#screenshots).
+6. [Installation](#installation).
+7. [To start the project](#to-start-the-project).
+<br/>
+<br/>
+
 ### Functional Requirements
 
 1. Creating new employees. Allowing employees to personalised their referral codes.
@@ -10,6 +21,8 @@ This project uses Node Js for the backend and Mongo DB for the database.
 3. Depicts referral history and gives incentives to employees on referring.
 4. It also sends out <b>emails and notifications</b> in real time.
 5. Allowing employees or referees to wthdraw from the program any time.
+<br>
+<br>
 
 ### Entities
 
@@ -82,8 +95,10 @@ This project uses Node Js for the backend and Mongo DB for the database.
     }
 }
 ```
+<br>
+<br>
 
-### API Design
+### High Level of API Designs
 
 1. Create an employee:
 
@@ -248,10 +263,13 @@ RESPONSE
     }
 }
 ```
+<br>
+<br>
 
 ### Current Architecture
 <img width="832" alt="currentarch" src="https://github.com/JainManjari/ReferralSystem/assets/54873596/ed931e7c-a3b5-4f9e-96eb-0be229ae4a3e">
-
+<br>
+<br>
 
 
 ### Screenshots
@@ -294,6 +312,8 @@ RESPONSE
         <br>
     </li>
 </ol>
+<br>
+<br>
 
 ## Installation
 
@@ -346,26 +366,24 @@ npm install -g nodemon
 ```
 npm install
 ```
-
+<br>
 <br>
 
 ## To start the project
 
-<br>
+- Open in one terminal
+```
+redis-server
+```
 
-- Open one terminal
+- Open another terminal
 
 ```
 npm start
 ```
 
-- Open other terminal
-
-```
-redis-server
-```
-
 - Run the code on http://localhost:8000/
-  <br><br>
+<br>
+<br>
 
 ## For further assistance please reach me @ manjarijain98@gmail.com
